@@ -17,7 +17,7 @@ export class ContactPage {
   constructor(public navCtrl: NavController) {
     this.messages = [];
     this.preAnswers = [];
-    for(let i = 0; i < 3; i++){
+    for (let i = 0; i < 3; i++) {
       this.preAnswers.push({
         text: 'Answer ' + i,
         id: i
@@ -30,17 +30,17 @@ export class ContactPage {
       text: answer.text,
       identity: 'user'
     })
-  this.content.scrollToBottom();
+    this.content.scrollToBottom();
 
-}
-sendMessage(myReply){
-console.log(myReply);
-this.messages.push({
-  text: myReply.value,
-  identity: 'user'
-})
-myReply.value = null;
-this.content.scrollToBottom();
-}
+  }
+  sendMessage(myReply) {
+    console.log(myReply);
+    this.messages.push({
+      text: myReply.value,
+      identity: 'user'
+    })
+    myReply.value = null;
+    this.content.scrollToBottom();
+  }
 
 }
