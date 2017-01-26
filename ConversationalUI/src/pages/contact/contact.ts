@@ -22,14 +22,18 @@ export class ContactPage {
   }
 
   reply(answer) {
-
     this.messages.push({
       text: answer.text,
       identity: 'user'
     })
-
-
-
+}
+sendMessage(myReply){
+console.log(myReply);
+this.messages.push({
+  text: myReply.value,
+  identity: 'user'
+})
+myReply.value="";
 }
 
 }
