@@ -1,0 +1,49 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>
+      Conversation
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content>
+  <ion-list>
+
+    <ion-card *ngFor="let message of messages" class={{message.identity}}>
+      <p>{{message.text}}</p>
+    </ion-card>
+
+  </ion-list>
+
+
+
+
+<ion-footer>
+  <ion-list>
+    <ion-grid ref="bux" class="buttons">
+      <ion-row>
+        <ion-col *ngFor="let answer of preAnswers" width-33>
+          <button ion-button full (click)="reply(answer)"></button>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+
+  </ion-list>
+  <ion-grid>
+  <ion-row>
+    <ion-col width-80><ion-item>
+        <ion-input type="text" placeholder="Message"></ion-input>
+      </ion-item></ion-col>
+    <ion-col>
+      <button ion-button icon-only>
+      <ion-icon name="arrow-dropleft-circle"></ion-icon>
+    </button>
+    </ion-col>
+  </ion-row>
+</ion-grid>
+
+
+
+
+</ion-footer>
+</ion-content>
