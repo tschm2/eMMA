@@ -1,11 +1,37 @@
 <ion-header>
   <ion-navbar>
     <ion-title>
-      About
+      Medikationsmenu
     </ion-title>
   </ion-navbar>
 </ion-header>
 
 <ion-content padding>
 
+<button ion-button full (click)="showThis('1')">Medikationseinstellungen</button>
+  <ion-card >
+
+    <ion-card-header>
+      Card Header
+    </ion-card-header>
+
+    <ion-card-content>
+      <!-- Add card content here! -->
+    </ion-card-content>
+
+  </ion-card>
+<button ion-button full ion-button full (click)="showThis()">Medikationstagebuch</button>
+<ion-card id=1>
+
+  <ion-card-header>
+    Card Header
+  </ion-card-header>
+
+  <ion-card-content>
+    <!-- Add card content here! -->
+  </ion-card-content>
+
+</ion-card>
+<button ion-button full>QR-Code</button>
+<button ion-button full>FIHR Import</button>
 </ion-content>
